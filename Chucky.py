@@ -28,23 +28,23 @@ kk.login(token='TOKEN_KAMU_DISINI_BEIB')
 kk.loginResult()
 print "Kk-Login Success\n"
 
-kc = LINETCR.LINE()
+#kc = LINETCR.LINE()
 #kc.login(qr=True)
-kc.login(token='TOKEN_KAMU_DISINI_BEIB')
-kc.loginResult()
-print "Kc-Login Success\n"
+#kc.login(token='TOKEN_KAMU_DISINI_BEIB')
+#kc.loginResult()
+#print "Kc-Login Success\n"
 
-kr = LINETCR.LINE()
+#kr = LINETCR.LINE()
 #kr.login(qr=True)
-kr.login(token='TOKEN_KAMU_DISINI_BEIB')
-kr.loginResult()
-print "Kr-Login Success\n"
+#kr.login(token='TOKEN_KAMU_DISINI_BEIB')
+#kr.loginResult()
+#print "Kr-Login Success\n"
 
-km = LINETCR.LINE()
+#km = LINETCR.LINE()
 #km.login(qr=True)
-km.login(token='TOKEN_KAMU_DISINI_BEIB')
-km.loginResult()
-print "Km-Login Success\n\n=====[Sukses All Login]====="
+#km.login(token='TOKEN_KAMU_DISINI_BEIB')
+#km.loginResult()
+#print "Km-Login Success\n\n=====[Sukses All Login]====="
 
 reload(sys)
 sys.setdefaultencoding('utf-8')
@@ -309,12 +309,12 @@ KAC=[cl,ki,kk,kc,kr]
 mid = cl.getProfile().mid
 Amid = ki.getProfile().mid
 Bmid = kk.getProfile().mid
-Cmid = kc.getProfile().mid
-Dmid = kr.getProfile().mid
-Emid = km.getProfile().mid
-Bots=[mid,Amid,Bmid,Cmid,Dmid,Emid]
-Creator=["u14f64e139a3817afaabe27d237afb36b"]
-admin=["u14f64e139a3817afaabe27d237afb36b","u23ad5ddec0dd0523f9caffad673d693c","u8b2bb5214c1afc77d06901a535c23e30","u57a54b914085fea6f04c19f6fe589057","u94fb89525397a12a24df3642a7335fe7","u3a43893bf65289be03f9fd3a85dab2a7","u787d28e13bd4f94cdca5457cd90efaf4","u86304883a6fa105778bfdf13f467eaf0"]
+#Cmid = kc.getProfile().mid
+#Dmid = kr.getProfile().mid
+#Emid = km.getProfile().mid
+Bots=[mid,Amid,Bmid,]
+Creator=["u86a1f8acf42bc994054545d2ae1cd316"]
+admin=["u86a1f8acf42bc994054545d2ae1cd316"]
 
 contact = cl.getProfile()
 backup1 = cl.getProfile()
@@ -334,23 +334,23 @@ backup3.displayName = contact.displayName
 backup3.statusMessage = contact.statusMessage                        
 backup3.pictureStatus = contact.pictureStatus
 
-contact = kc.getProfile()
-backup4 = kc.getProfile()
-backup4.displayName = contact.displayName
-backup4.statusMessage = contact.statusMessage                        
-backup4.pictureStatus = contact.pictureStatus
+#contact = kc.getProfile()
+#backup4 = kc.getProfile()
+#backup4.displayName = contact.displayName
+#backup4.statusMessage = contact.statusMessage                        
+#backup4.pictureStatus = contact.pictureStatus
 
-contact = kr.getProfile()
-backup5 = kr.getProfile()
-backup5.displayName = contact.displayName
-backup5.statusMessage = contact.statusMessage                        
-backup5.pictureStatus = contact.pictureStatus
+#contact = kr.getProfile()
+#backup5 = kr.getProfile()
+#backup5.displayName = contact.displayName
+#backup5.statusMessage = contact.statusMessage                        
+#backup5.pictureStatus = contact.pictureStatus
 
 responsename = cl.getProfile().displayName
 responsename2 = ki.getProfile().displayName
 responsename3 = kk.getProfile().displayName
-responsename4 = kc.getProfile().displayName
-responsename5 = kr.getProfile().displayName
+#responsename4 = kc.getProfile().displayName
+#responsename5 = kr.getProfile().displayName
 
 
 wait = {
@@ -656,8 +656,8 @@ def bot(op):
                             Name = cl.getContact(op.param2).displayName
                             Name = ki.getContact(op.param2).displayName
                             Name = kk.getContact(op.param2).displayName
-                            Name = kc.getContact(op.param2).displayName
-                            Name = kr.getContact(op.param2).displayName
+                            #Name = kc.getContact(op.param2).displayName
+                            #Name = kr.getContact(op.param2).displayName
                             if Name in cctv['sidermem'][op.param1]:
                                 pass
                             else:
@@ -699,12 +699,12 @@ def bot(op):
             if op.param3 in Bmid:
 		if op.param2 in Creator:
 		    kk.acceptGroupInvitation(op.param1)
-            if op.param3 in Cmid:
-		if op.param2 in Creator:
-		    kc.acceptGroupInvitation(op.param1)
-            if op.param3 in Dmid:
-		if op.param2 in Creator:
-		    kr.acceptGroupInvitation(op.param1)
+           # if op.param3 in Cmid:
+	#	if op.param2 in Creator:
+	#	    kc.acceptGroupInvitation(op.param1)
+         #   if op.param3 in Dmid:
+	#	if op.param2 in Creator:
+	#	    kr.acceptGroupInvitation(op.param1)
  
             if op.param3 in mid:
 		if op.param2 in Amid:
@@ -712,9 +712,9 @@ def bot(op):
             if op.param3 in mid:
 		if op.param2 in Bmid:
 		    cl.acceptGroupInvitation(op.param1)
-            if op.param3 in mid:
-		if op.param2 in Cmid:
-		    cl.acceptGroupInvitation(op.param1)
+          #  if op.param3 in mid:
+	#	if op.param2 in Cmid:
+	#	    cl.acceptGroupInvitation(op.param1)
  
             if op.param3 in Amid:
 		if op.param2 in mid:
@@ -723,7 +723,7 @@ def bot(op):
 		if op.param2 in Bmid:
 		    ki.acceptGroupInvitation(op.param1)
             if op.param3 in Amid:
-		if op.param2 in Cmid:
+	#	if op.param2 in Cmid:
 		    ki.acceptGroupInvitation(op.param1)
  
             if op.param3 in Bmid:
@@ -733,28 +733,28 @@ def bot(op):
 		if op.param2 in Amid:
 		    kk.acceptGroupInvitation(op.param1)
             if op.param3 in Bmid:
-		if op.param2 in Cmid:
-		    kk.acceptGroupInvitation(op.param1)
+	#	if op.param2 in Cmid:
+	#	    kk.acceptGroupInvitation(op.param1)
  
-            if op.param3 in Cmid:
+          #  if op.param3 in Cmid:
 		if op.param2 in mid:
 		    kc.acceptGroupInvitation(op.param1)
-            if op.param3 in Cmid:
+       #     if op.param3 in Cmid:
 		if op.param2 in Amid:
 		    kc.acceptGroupInvitation(op.param1)
-            if op.param3 in Cmid:
-		if op.param2 in Cmid:
-		    kc.acceptGroupInvitation(op.param1)
+      #      if op.param3 in Cmid:
+	#	if op.param2 in Cmid:
+	#	    kc.acceptGroupInvitation(op.param1)
  
-            if op.param3 in Dmid:
-		if op.param2 in mid:
-		    kr.acceptGroupInvitation(op.param1)
-            if op.param3 in Dmid:
-		if op.param2 in Amid:
-		    kr.acceptGroupInvitation(op.param1)
-            if op.param3 in Dmid:
-		if op.param2 in Bmid:
-		    kr.acceptGroupInvitation(op.param1)
+         #   if op.param3 in Dmid:
+	#	if op.param2 in mid:
+	#	    kr.acceptGroupInvitation(op.param1)
+         #   if op.param3 in Dmid:
+	#	if op.param2 in Amid:
+	#	    kr.acceptGroupInvitation(op.param1)
+         #   if op.param3 in Dmid:
+	#	if op.param2 in Bmid:
+	#	    kr.acceptGroupInvitation(op.param1)
 		    
 	    if mid in op.param3:	        
                 if wait["AutoJoinCancel"] == True:
@@ -774,8 +774,8 @@ def bot(op):
 			Ti = cl.reissueGroupTicket(op.param1)
 			ki.acceptGroupInvitationByTicket(op.param1,Ti)
 			kk.acceptGroupInvitationByTicket(op.param1,Ti)
-			kc.acceptGroupInvitationByTicket(op.param1,Ti)
-			kr.acceptGroupInvitationByTicket(op.param1,Ti)
+		#	kc.acceptGroupInvitationByTicket(op.param1,Ti)
+			#kr.acceptGroupInvitationByTicket(op.param1,Ti)
 			G.preventJoinByTicket = True
 			cl.updateGroup(G)
 			cl.sendText(op.param1,"☆Ketik ☞Help☜ Untuk Bantuan☆\n☆Harap Gunakan Dengan Bijak ^_^ ☆")
@@ -794,8 +794,8 @@ def bot(op):
 			Ti = cl.reissueGroupTicket(op.param1)
 			ki.acceptGroupInvitationByTicket(op.param1,Ti)
 			kk.acceptGroupInvitationByTicket(op.param1,Ti)
-			kc.acceptGroupInvitationByTicket(op.param1,Ti)
-			kr.acceptGroupInvitationByTicket(op.param1,Ti)
+			#kc.acceptGroupInvitationByTicket(op.param1,Ti)
+		#	kr.acceptGroupInvitationByTicket(op.param1,Ti)
 			G.preventJoinByTicket = True
 			cl.updateGroup(G)
 			cl.sendText(op.param1,"☆Ketik ☞Help☜ Untuk Bantuan☆\n☆Harap Gunakan Dengan Bijak ^_^ ☆")
